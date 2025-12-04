@@ -130,14 +130,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Contact Form Handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            // Show Toast
-            showToast('Message sent successfully! I will get back to you soon.');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
 
-            // Reset Form
-            contactForm.reset();
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    showToast('Message sent successfully! I will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    showToast('Oops! There was a problem sending your message.');
+                }
+            } catch (error) {
+                showToast('Oops! There was a problem sending your message.');
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
     }
 
