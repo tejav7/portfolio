@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('click', () => {
         const currentTheme = html.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateIcon(newTheme);
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.nav');
-    
+
     mobileBtn.addEventListener('click', () => {
         nav.classList.toggle('active');
         const icon = mobileBtn.querySelector('i');
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 // Account for fixed header
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
@@ -121,9 +121,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add fade-in class to elements we want to animate
     const animateElements = document.querySelectorAll('.section-title, .about-text, .experience-card, .project-card, .skill-category, .service-card, .contact-wrapper');
-    
+
     animateElements.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
     });
+
+    // Contact Form Handling
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show Toast
+            showToast('Message sent successfully! I will get back to you soon.');
+
+            // Reset Form
+            contactForm.reset();
+        });
+    }
+
+    function showToast(message) {
+        // Remove existing toast if any
+        const existingToast = document.querySelector('.toast');
+        if (existingToast) {
+            existingToast.remove();
+        }
+
+        // Create Toast
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            <span>${message}</span>
+        `;
+
+        document.body.appendChild(toast);
+
+        // Trigger animation
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 10);
+
+        // Hide after 3 seconds
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                toast.remove();
+            }, 500);
+        }, 3000);
+    }
 });

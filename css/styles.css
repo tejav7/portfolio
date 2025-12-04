@@ -810,3 +810,59 @@ img {
         transform: none;
     }
 }
+
+/* Small Mobile Devices */
+@media (max-width: 375px) {
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-image-bg {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    padding: 16px 24px;
+    border-radius: 50px;
+    box-shadow: var(--shadow-hover);
+    border: 1px solid var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2000;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.toast i {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
