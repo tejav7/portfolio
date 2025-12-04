@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teja Akula | Software Engineer - Backend & Automation</title>
+    <meta name="description"
+        content="Portfolio of Teja Akula, a Software Engineer specializing in backend development, automation, and cloud-native applications.">
+
+    <!-- PWA & Mobile -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/profile_picture.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">Teja<span class="accent">.</span></a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Teja Akula</h1>
+                    <h2 class="hero-title">Software Engineer <span class="accent">|</span> Backend & Automation</h2>
+                    <p class="hero-description">
+                        I build scalable backend systems, REST APIs, and cloud-native applications that power real-world
+                        business needs.
+                        Specializing in Python, JavaScript, Docker, Kubernetes, and DevOps.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-bg"></div>
+                    <img src="images/profile_picture.png" alt="Teja Akula" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am a Software Engineer with strong experience in building scalable backend systems, REST
+                            APIs, and cloud-native applications.
+                            I primarily work with <strong>Python, JavaScript, Docker, Kubernetes,</strong> and modern
+                            DevOps tools to create reliable and high-performance services.
+                        </p>
+                        <p>
+                            I have developed enterprise-grade solutions, automated processes, improved system
+                            performance, and built tools that save engineering time and reduce operational effort.
+                            I enjoy solving complex problems, improving backend efficiency, and delivering clean,
+                            maintainable code that supports real business needs.
+                        </p>
+
+                        <div class="quick-facts">
+                            <div class="fact-item">
+                                <i class="fas fa-server"></i>
+                                <span>Backend & Automation Focus</span>
+                            </div>
+                            <div class="fact-item">
+                                <i class="fas fa-cloud"></i>
+                                <span>Cloud-native & Microservices</span>
+                            </div>
+                            <div class="fact-item">
+                                <i class="fas fa-rocket"></i>
+                                <span>Performance & Reliability</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education">
+                        <h3 class="subsection-title">Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-degree">Master’s in Information Technology and Management</h4>
+                                    <p class="timeline-institution">The University of Texas at Dallas</p>
+                                    <span class="timeline-date">Aug 2023 – May 2025</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-degree">Bachelor’s in Computer Science and Engineering</h4>
+                                    <p class="timeline-institution">Amrita University – Coimbatore</p>
+                                    <span class="timeline-date">July 2018 – May 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-list">
+                    <!-- Role 1 -->
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">Software Engineer</h3>
+                                <h4 class="exp-company">Edgesoft Corp</h4>
+                            </div>
+                            <span class="exp-date">May 2024 – Present</span>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Develop and optimize Python-based backend services for high-traffic enterprise systems.
+                            </li>
+                            <li>Build and enhance REST APIs for cross-platform communication (backend, web, mobile).
+                            </li>
+                            <li>Containerize backend applications with Docker and deploy microservices to Kubernetes.
+                            </li>
+                            <li>Create automation scripts for deployment, log processing, environment checks, and
+                                configuration validation.</li>
+                            <li>Implement CI/CD pipelines using tools like Jenkins and GitHub Actions.</li>
+                            <li>Improve backend performance with query tuning, caching strategies, and response-time
+                                enhancements.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Python</span><span>REST
+                                APIs</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span>
+                        </div>
+                    </div>
+
+                    <!-- Role 2 -->
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">Software Development Engineer</h3>
+                                <h4 class="exp-company">Verizon</h4>
+                            </div>
+                            <span class="exp-date">Feb 2022 – July 2023</span>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Built backend code for a 5G Deployment Tracker using Python, JavaScript, Django, React,
+                                and PostgreSQL.</li>
+                            <li>Automated deployment status tracking to eliminate manual reporting and reduce meeting
+                                overhead.</li>
+                            <li>Designed and optimized REST APIs and SQL queries for real-time dashboards and bulk data
+                                operations.</li>
+                            <li>Used Git, Docker, and Kubernetes for microservice deployment.</li>
+                            <li>Implemented system health checks and environment validation to reduce configuration
+                                failures.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Python</span><span>Django</span><span>React</span><span>PostgreSQL</span><span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Backend & Programming</h3>
+                        <div class="skill-tags">
+                            <span>Python</span><span>Django</span><span>Flask</span><span>FastAPI</span>
+                            <span>Golang</span><span>JavaScript</span><span>REST APIs</span><span>Microservices</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skill-tags">
+                            <span>AWS</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span>
+                            <span>Jenkins</span><span>GitHub Actions</span><span>Linux</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h3>Databases</h3>
+                        <div class="skill-tags">
+                            <span>PostgreSQL</span><span>MySQL</span><span>MSSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-check-circle"></i></div>
+                        <h3>Testing & Quality</h3>
+                        <div class="skill-tags">
+                            <span>PyTest</span><span>Unit Testing</span><span>Integration
+                                Testing</span><span>Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Document Intelligence & Semantic Search System</h3>
+                            <p class="project-desc">Engineered a document intelligence system to improve document
+                                accessibility and search capabilities.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">90%</span>
+                                    <span class="metric-label">Retrieval Accuracy</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">70%</span>
+                                    <span class="metric-label">Faster Lookup</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>Python</span><span>Pandas</span><span>NLP</span><span>FAISS</span><span>LLMs</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">IP Number Asset Management Tool</h3>
+                            <p class="project-desc">Automated IP address assignment process, reducing manual workload
+                                and eliminating conflicts.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">60%</span>
+                                    <span class="metric-label">Workload Reduction</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">0</span>
+                                    <span class="metric-label">Conflicts</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>Python</span><span>Automation</span><span>Networking</span><span>Scripting</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Jira Automation with Python</h3>
+                            <p class="project-desc">Streamlined ticket management by listening for events and applying
+                                custom rules for assignment.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">Auto</span>
+                                    <span class="metric-label">Assignment</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">High</span>
+                                    <span class="metric-label">Accuracy</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>Python</span><span>Jira API</span><span>Automation</span><span>DevOps</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services">
+            <div class="container">
+                <h2 class="section-title">Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Backend Development</h3>
+                        <p>Design and development of scalable backend systems and REST APIs. Microservices architecture,
+                            performance optimization, secure and reliable services.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Automation Solutions</h3>
+                        <p>Building automation scripts and tools to reduce manual work and streamline workflows. Focus
+                            on reliability, maintainability, and operational efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-intro">Interested in working together or want to discuss a project? Feel free to reach
+                    out.</p>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <a href="mailto:akulateja7800@gmail.com" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <span>akulateja7800@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+19494848434" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <span>+1 949 484 8434</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/akulateja44" target="_blank" class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <span>linkedin.com/in/akulateja44</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <form class="contact-form"
+                        onsubmit="event.preventDefault(); alert('Thank you for your message! This is a demo form.');">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Teja Akula. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/akulateja44" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:akulateja7800@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
